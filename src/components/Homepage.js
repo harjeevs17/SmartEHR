@@ -3,7 +3,7 @@ import Abi from "../assets/abi.json";
 import {ethers} from "ethers";
 const Homepage = ()=>{
     
-    const contractAddress = "0x6419b8Cc3d27DCEC64f7cDb774FeF248e3fC09BC";
+    const contractAddress = "0x0ed3D9E292836CeAa30d459c69395771A3bA84cd";
     const [connectedWallet,setConnectedWallet] = useState("Connect wallet");
     const [error,setError] = useState(null);
     const [address,setAddress] = useState(null);
@@ -45,6 +45,15 @@ const Homepage = ()=>{
         event.preventDefault();
         contract.set1(event.target.setData.value);
     }
+
+    const submitPatientData = (event)=>{
+        event.preventDefault();
+        alert(address)
+        contract.setPatient(address,event.target.name.value,event.target.age.value,event.target.sex.value);
+    }
+    const getUserData = ()=>{
+        
+    }
     
     
     return(
@@ -59,6 +68,19 @@ const Homepage = ()=>{
                 <input id="setData" type="text"></input>
                 <button type="submit">Submit Data to blockchain</button>
             </form>
+
+
+            <p>Health Data</p>
+            <form onSubmit={submitPatientData}>
+                <input type="text" id="name"/>
+                <input type="text" id="age"/>
+                <input type="text" id="sex"/>
+                <button type="submit">Submit Health Data</button>
+            </form>
+            <button onClick={getUserData}>Get Data</button>
+            
+                
+
         </div>
     )
 }

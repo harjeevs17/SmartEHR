@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color:white;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    gap:50px;
+    flex-wrap: wrap;
+    color:white;
+}
+.walletBtn{
+    background-image: linear-gradient(to right top, #2e16ce, #560bae, #620b91, #641577, #5f1f61);    height: 35px;
+    width: 110px;
+    border-radius: 20px;
+    border:0;
+    color:white
+}

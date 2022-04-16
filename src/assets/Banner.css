@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto+Condensed:wght@300&family=Share+Tech+Mono&display=swap');
+.containerBanner{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color:white;
+    height: 100vh;
+    font-family: 'Share Tech Mono', monospace;
+  
+}
+.left p{
+    font-size: 30px;
+}
+.left span{
+    background-image: linear-gradient(to right top, #763ff6, #9a44f4, #b74cf3, #d056f1, #e661f0);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.bannerBtns input[type=button]{
+    background-image: linear-gradient(to right top, #763ff6, #9a44f4, #b74cf3, #d056f1, #e661f0);
+    height: 35px;
+    width: 110px;
+    border-radius: 5px;
+    border:0;
+    color:white;
+    margin:5px;
+}

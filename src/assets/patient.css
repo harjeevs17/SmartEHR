@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto+Condensed:wght@300&family=Share+Tech+Mono&display=swap');
+
+.insertPatient form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.insertPatient form p{
+    font-size: 20px;
+    color:white;
+    font-family: 'Share Tech Mono', monospace;
+}
+.insertPatient form input{
+    height: 30px;
+    width:30%;
+    margin: 10px;
+}
+.insertPatient form input[type=submit]{
+    background-image: linear-gradient(to right top, #763ff6, #9a44f4, #b74cf3, #d056f1, #e661f0);
+    border-radius: 5px;
+    border:0;
+    color:white;
+    margin:5px;
+}
