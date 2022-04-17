@@ -1,0 +1,12 @@
+.hospitalContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+.item{
+    border:solid red 5px;
+    margin:5px;
+   
+}
