@@ -29,6 +29,8 @@ const Header = (props)=>{
         let tempSigner = tempProvider.getSigner();
         props.setSignerV(tempSigner);
         let tempContract = new ethers.Contract(props.contractAddress,Abi,tempSigner);
+        console.log("hii");
+        console.log(tempContract);
         props.setContractV(tempContract);
     }
     return (

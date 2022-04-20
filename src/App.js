@@ -11,10 +11,11 @@ import Header from "./components/Header";
 import Hospital from './pages/hospital';
 import Abi from "./assets/abi.json";
 import {ethers} from "ethers"
-
+import {Link} from "react-router-dom";
+import "./assets/Header.css";
 function App() {
 
-    const contractAddress = "0x073Bb80799b7c98cC5Ae7625fc5155fd4afdf56e";
+    const contractAddress = "0xa3D0bB48a84e8850c433f835189714FBDaE86fa9";
     const [connectedWallet,setConnectedWallet] = useState("Connect wallet");
     const [error,setError] = useState(null);
     const [address,setAddress] = useState(null);
@@ -46,17 +47,29 @@ const updateEthers = ()=>{
     let tempSigner = tempProvider.getSigner();
     setSigner(tempSigner);
     let tempContract = new ethers.Contract(contractAddress,Abi,tempSigner);
+    console.log(tempContract);
     setContract(tempContract);
 }
-
+const LinkStyle={
+  color: "white",textDecoration: "none"
+}
 
   return (
     <BrowserRouter>
-        <Header setAddressV = {setAddress} setConnectedWalletV = {setConnectedWallet} setContractV = {setContract} contractAddressV = {contractAddress} setProviderV = {setProvider} setSignerV = {setSigner} addressV = {address}/>
+        <div className="container">
+            <div className="logo"><p>Logo</p></div>
+            <div className="menu">
+                <Link to="/patient" style={LinkStyle}>Patient</Link>
+                <Link to="/hospital" style={LinkStyle}>Hospital</Link>
+            </div>
+            <div className="wallet">
+               <input onClick = {connectWalletHandler} type="button" className="walletBtn" value={address!=null?address:"Connect wallet"}></input>
+            </div>
+        </div>
         <Routes>
         <Route path="/" element={ <LandingPage/> } />
-        <Route path="patient" element={ <Patient/> } />
-        <Route path="hospital" element={ <Hospital/> } />
+        <Route path="patient" element={ <Patient contractV={contract} addressV={address}/> } />
+        <Route path="hospital" element={ <Hospital  contractV={contract} addressV={address}/> } />
       </Routes>
     </BrowserRouter>
      

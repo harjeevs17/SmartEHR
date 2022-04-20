@@ -3,7 +3,7 @@ import Abi from "../assets/abi.json";
 import {ethers} from "ethers";
 const Homepage = ()=>{
     
-    const contractAddress = "0x0ed3D9E292836CeAa30d459c69395771A3bA84cd";
+    const contractAddress = "0x371FDcB8E9d8Bb5f04CB8852C48cdb0574597F79";
     const [connectedWallet,setConnectedWallet] = useState("Connect wallet");
     const [error,setError] = useState(null);
     const [address,setAddress] = useState(null);
