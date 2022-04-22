@@ -1,0 +1,9 @@
+.chemistBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inner1{
+    width: 50%;
+}

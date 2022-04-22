@@ -1,0 +1,51 @@
+.containerAddDetails{
+    text-align: center;
+}
+.containerAddDetails p{
+    color: white;
+}
+ form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+ form p{
+    font-size: 20px;
+    color:white;
+    font-family: 'Share Tech Mono', monospace;
+}
+ form input{
+    height: 30px;
+    width:30%;
+    margin: 10px;
+}
+ form input[type=submit]{
+    background-image: linear-gradient(to right top, #763ff6, #9a44f4, #b74cf3, #d056f1, #e661f0);
+    border-radius: 5px;
+    border:0;
+    color:white;
+    margin:5px;
+}
+.showBox{
+    margin:20px;
+    background-image: linear-gradient(to right top, #2e16ce, #560bae, #620b91, #641577, #5f1f61);    height: 35px;
+    width: 110px;
+    border-radius: 20px;
+    border:0;
+    color:white
+}
+.recordsBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.inner1{
+    width: 50%;
+    border:solid red 1px;
+    margin:5px;
+    background-color: rebeccapurple;
+    color:white
+}

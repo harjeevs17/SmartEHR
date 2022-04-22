@@ -1,12 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto+Condensed:wght@300&family=Share+Tech+Mono&display=swap');
+
 .hospitalContainer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    height: 70vh;
 }
-.item{
-    border:solid red 5px;
+.inner{
+    border:solid red 1px;
     margin:5px;
-   
+    background-color: rebeccapurple;
+    color:white
+}
+.pHeading{
+    font-size: 20px;
+    color:white;
+    font-family: 'Share Tech Mono', monospace;
+}
+.fetchBtn{
+        margin:20px;
+        background-image: linear-gradient(to right top, #2e16ce, #560bae, #620b91, #641577, #5f1f61);    height: 35px;
+        width: 110px;
+        border-radius: 20px;
+        border:0;
+        color:white
 }

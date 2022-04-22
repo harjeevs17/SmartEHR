@@ -13,9 +13,11 @@ import Abi from "./assets/abi.json";
 import {ethers} from "ethers"
 import {Link} from "react-router-dom";
 import "./assets/Header.css";
+import AddDetails from './pages/addDetails';
+import Chemist from './pages/chemist';
 function App() {
 
-    const contractAddress = "0xa3D0bB48a84e8850c433f835189714FBDaE86fa9";
+    const contractAddress = "0x1733cDC3Ebc95679E451ED3824654f3899eb1209";
     const [connectedWallet,setConnectedWallet] = useState("Connect wallet");
     const [error,setError] = useState(null);
     const [address,setAddress] = useState(null);
@@ -61,6 +63,7 @@ const LinkStyle={
             <div className="menu">
                 <Link to="/patient" style={LinkStyle}>Patient</Link>
                 <Link to="/hospital" style={LinkStyle}>Hospital</Link>
+                <Link to="/chemist" style={LinkStyle}>Chemist</Link>
             </div>
             <div className="wallet">
                <input onClick = {connectWalletHandler} type="button" className="walletBtn" value={address!=null?address:"Connect wallet"}></input>
@@ -70,6 +73,8 @@ const LinkStyle={
         <Route path="/" element={ <LandingPage/> } />
         <Route path="patient" element={ <Patient contractV={contract} addressV={address}/> } />
         <Route path="hospital" element={ <Hospital  contractV={contract} addressV={address}/> } />
+        <Route path="addDetails/:address" element={ <AddDetails  contractV={contract} addressV={address}/> } />
+        <Route path="chemist" element={ <Chemist  contractV={contract} addressV={address}/> } />
       </Routes>
     </BrowserRouter>
      

@@ -20,13 +20,13 @@ const Patient =(props)=>{
        
     },[props.addressV])
     return(  
-        <div className="container">
+        <div className="container1">
             {data==null?<div className="insertPatient">
                 <form onSubmit={submitPatientData} >
                 <p>Insert a Patient</p>
-                   <input id="name" type="text"/>
-                   <input id="age" type="text"/>
-                   <input id="sex" type="text"/>
+                   <input id="name" type="text" placeholder="Name"/>
+                   <input id="age" type="text" placeholder="Age"/>
+                   <input id="sex" type="text" placeholder="Sex"/>
                    <input type="submit" value="Insert"/>
                </form>
            </div>:<div><p>Data is already inserted {data[1]}</p></div>}

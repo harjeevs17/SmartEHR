@@ -39,6 +39,7 @@ const Header = (props)=>{
             <div className="menu">
                 <Link to="/patient" style={LinkStyle}>Patient</Link>
                 <Link to="/hospital" style={LinkStyle}>Hospital</Link>
+                <Link to="/chemist" style={LinkStyle}>Chemist</Link>
             </div>
             <div className="wallet">
                <input onClick = {connectWalletHandler} type="button" className="walletBtn" value={props.addressV!=null?props.addressV:"Connect wallet"}></input>
